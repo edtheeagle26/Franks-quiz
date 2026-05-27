@@ -73,3 +73,4 @@ export default defineConfig({
     allowedHosts: true,
   },
 });
+Fix Vite base path for Vercel
