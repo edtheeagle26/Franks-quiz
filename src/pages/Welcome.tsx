@@ -1,10 +1,3 @@
-<img
-  src="/aircraft/IMG-20161015-WA0001~2_1779522309717.jpg"
-  alt="Frank"
-  className="w-full h-full rounded-full object-cover border-4 border-primary shadow-lg shadow-primary/30"
-  data-testid="img-frank"
-/>
-
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Trophy } from "lucide-react";
@@ -24,12 +17,12 @@ export default function WelcomeScreen() {
         <div className="relative mx-auto w-48 h-48 md:w-56 md:h-56">
           <div className="absolute inset-0 rounded-full border-4 border-primary/60 animate-pulse" />
           <img
-            src={frankPhoto}
+            src="/aircraft/IMG-20161015-WA0001~2_1779522309717.jpg"
             alt="Frank"
             className="w-full h-full rounded-full object-cover border-4 border-primary shadow-lg shadow-primary/30"
             data-testid="img-frank"
           />
-          {/* Crosshair corners around photo */}
+          {/* Crosshair corners */}
           <div className="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-primary" />
           <div className="absolute -top-3 -right-3 w-6 h-6 border-t-2 border-r-2 border-primary" />
           <div className="absolute -bottom-3 -left-3 w-6 h-6 border-b-2 border-l-2 border-primary" />
@@ -53,6 +46,7 @@ export default function WelcomeScreen() {
               Start Missie
             </Button>
           </Link>
+
           <Link href="/scoreboard">
             <Button
               size="lg"
