@@ -67,5 +67,12 @@ export default function WelcomeScreen() {
           </Link>
         </div>
       </div>
-
       {/* Decorative corners */}
+      <div className="fixed top-4 left-4 w-16 h-16 border-t-2 border-l-2 border-primary/50 opacity-50" />
+      <div className="fixed top-4 right-4 w-16 h-16 border-t-2 border-r-2 border-primary/50 opacity-50" />
+      <div className="fixed bottom-4 left-4 w-16 h-16 border-b-2 border-l-2 border-primary/50 opacity-50" />
+      <div className="fixed bottom-4 right-4 w-16 h-16 border-b-2 border-r-2 border-primary/50 opacity-50" />
+    </div>   {/* ← deze was je kwijt */}
+  );
+}
+
