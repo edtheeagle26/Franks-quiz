@@ -19,7 +19,7 @@ export default function WelcomeScreen() {
         <div className="relative mx-auto w-48 h-48 md:w-56 md:h-56">
           <div className="absolute inset-0 rounded-full border-4 border-primary/60 animate-pulse" />
           <img
-            src="/aircraft/IMG-20161015-WA0001~2_1779522309717.jpg"
+            src="/aircraft/IMG-20190915-WA0008.jpg"
             alt="Frank"
             className="w-full h-full rounded-full object-cover border-4 border-primary shadow-lg shadow-primary/30"
             data-testid="img-frank"
