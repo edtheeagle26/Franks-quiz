@@ -1,4 +1,4 @@
-import frankPhoto from "@assets/IMG-20161015-WA0001~2_1779522309717.jpg";
+import frankPhoto from "/aircraft/IMG-20161015-WA0001~2_1779522309717.jpg";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Trophy } from "lucide-react";
