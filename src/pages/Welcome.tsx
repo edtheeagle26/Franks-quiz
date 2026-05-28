@@ -4,7 +4,7 @@ import { Trophy } from "lucide-react";
 
 export default function WelcomeScreen() {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center p-6 text-center bg-background text-foreground">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center p-6 text-center bg-black text-white">
       <div className="max-w-2xl mx-auto space-y-10">
 
         {/* Titel */}
@@ -33,8 +33,8 @@ export default function WelcomeScreen() {
         </div>
 
         {/* Tekst */}
-        <div className="space-y-3 text-muted-foreground text-lg md:text-xl">
-          <p className="text-foreground font-semibold text-xl">
+        <div className="space-y-3 text-gray-300 text-lg md:text-xl">
+          <p className="text-white font-semibold text-xl">
             Gefeliciteerd Frank! 60 jaar en nog altijd de scherpste ogen in de lucht.
           </p>
           <p>
@@ -47,7 +47,7 @@ export default function WelcomeScreen() {
           <Link href="/quiz">
             <Button
               size="lg"
-              className="w-full sm:w-auto text-xl px-12 py-8 rounded-none border-2 border-primary bg-primary/20 hover:bg-primary text-primary hover:text-primary-foreground uppercase tracking-widest font-bold"
+              className="w-full sm:w-auto text-xl px-12 py-8 rounded-none border-2 border-primary bg-primary/20 hover:bg-primary text-primary hover:text-black uppercase tracking-widest font-bold"
               data-testid="button-start-quiz"
             >
               Start Missie
@@ -58,7 +58,7 @@ export default function WelcomeScreen() {
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto text-xl px-12 py-8 rounded-none border-2 border-border bg-transparent hover:bg-muted text-muted-foreground hover:text-foreground uppercase tracking-widest font-bold"
+              className="w-full sm:w-auto text-xl px-12 py-8 rounded-none border-2 border-gray-500 bg-transparent hover:bg-gray-800 text-gray-300 hover:text-white uppercase tracking-widest font-bold"
               data-testid="button-scoreboard"
             >
               <Trophy className="mr-2 w-5 h-5" />
@@ -67,12 +67,12 @@ export default function WelcomeScreen() {
           </Link>
         </div>
       </div>
+
       {/* Decorative corners */}
       <div className="fixed top-4 left-4 w-16 h-16 border-t-2 border-l-2 border-primary/50 opacity-50" />
       <div className="fixed top-4 right-4 w-16 h-16 border-t-2 border-r-2 border-primary/50 opacity-50" />
       <div className="fixed bottom-4 left-4 w-16 h-16 border-b-2 border-l-2 border-primary/50 opacity-50" />
       <div className="fixed bottom-4 right-4 w-16 h-16 border-b-2 border-r-2 border-primary/50 opacity-50" />
-    </div>  
+    </div>
   );
 }
-
