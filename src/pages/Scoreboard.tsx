@@ -90,4 +90,57 @@ export default function Scoreboard() {
       ) : (
         <div className="space-y-3" data-testid="list-scores">
           {scores.map((entry, index) => {
-            const pct = Math
+            const pct = Math.round((entry.score / entry.total) * 100);
+            const isMedal = index < 3;
+
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.04 }}
+                className="flex items-center gap-4 bg-card border border-border p-4 rounded-none"
+                data-testid={`row-score-${index}`}
+              >
+                <div
+                  className={`text-2xl font-bold font-mono w-10 text-center ${
+                    isMedal ? MEDAL_COLORS[index] : "text-muted-foreground"
+                  }`}
+                >
+                  {index + 1}
+                </div>
+
+                <div className="flex-grow">
+                  <div
+                    className="font-bold text-foreground uppercase tracking-wide"
+                    data-testid={`text-score-name-${index}`}
+                  >
+                    {entry.name}
+                  </div>
+                  <div className="text-xs text-muted-foreground font-mono">{entry.date}</div>
+                </div>
+
+                <div className="text-right">
+                  <div
+                    className="text-xl font-bold font-mono text-primary"
+                    data-testid={`text-score-value-${index}`}
+                  >
+                    {entry.score}
+                    <span className="text-sm text-muted-foreground"> / {entry.total}</span>
+                  </div>
+                  <div className="text-xs text-muted-foreground font-mono">{pct}%</div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Decorative corners */}
+      <div className="fixed top-4 left-4 w-16 h-16 border-t-2 border-l-2 border-primary/50 opacity-30" />
+      <div className="fixed top-4 right-4 w-16 h-16 border-t-2 border-r-2 border-primary/50 opacity-30" />
+      <div className="fixed bottom-4 left-4 w-16 h-16 border-b-2 border-l-2 border-primary/50 opacity-30" />
+      <div className="fixed bottom-4 right-4 w-16 h-16 border-b-2 border-r-2 border-primary/50 opacity-30" />
+    </div>
+  );
+}
