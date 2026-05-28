@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Confetti } from "@/components/Confetti";
 import { aircraftData, Aircraft, TOTAL_QUESTIONS } from "@/data/aircraft";
 import { CheckCircle2, XCircle, ArrowRight, Award, Trophy, Save } from "lucide-react";
-import { saveScore } from "@/pages/Scoreboard";
+import { saveScore } from "@/lib/score";
 
 function shuffleArray<T>(array: T[]): T[] {
   const newArray = [...array];
