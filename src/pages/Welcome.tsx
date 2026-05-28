@@ -1,4 +1,10 @@
-import frankPhoto from "/aircraft/IMG-20161015-WA0001~2_1779522309717.jpg";
+<img
+  src="/aircraft/IMG-20161015-WA0001~2_1779522309717.jpg"
+  alt="Frank"
+  className="w-full h-full rounded-full object-cover border-4 border-primary shadow-lg shadow-primary/30"
+  data-testid="img-frank"
+/>
+
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Trophy } from "lucide-react";
