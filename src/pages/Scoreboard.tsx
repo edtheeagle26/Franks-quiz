@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Trophy, Trash2 } from "lucide-react";
+import { getScores } from "@/lib/score";
 
 export interface ScoreEntry {
   name: string;
