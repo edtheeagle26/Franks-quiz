@@ -164,7 +164,12 @@ export default function Quiz() {
   const isCorrect = selectedAnswer === currentAircraft.name;
   const letters = ["A", "B", "C", "D"];
 
-  return (
+  if (quizComplete) {
+  const isTop = score >= Math.round(TOTAL_QUESTIONS * 0.75);
+  const isGood = score >= Math.round(TOTAL_QUESTIONS * 0.5);
+  const message = isTop ? "Topvlieger!" : isGood ? "Goed gedaan!" : "Blijf oefenen!";
+ 
+    return (
     <div className="min-h-screen w-full flex flex-col p-4 md:p-8 max-w-4xl mx-auto">
       {/* HUD Header */}
       <div className="flex justify-between items-center mb-4 text-primary font-mono uppercase text-sm md:text-base">
